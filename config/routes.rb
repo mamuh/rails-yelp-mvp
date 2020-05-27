@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: 'restaurants#index'
 
   resources :restaurants, except: [:destroy, :update, :edit] do
-    resources :reviews, only: %i[index new create]
+    resources :reviews, only: %i[index create]
   end
 end
